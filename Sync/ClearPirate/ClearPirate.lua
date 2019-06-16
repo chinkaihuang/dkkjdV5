@@ -80,7 +80,10 @@ for i = 1, count do
                         GoFight()
                     end
                 else
-                    if 
+                    if lv >= requiredLevel then
+                        GoFight()
+                    else
+                    end
                 end
 
             until true
