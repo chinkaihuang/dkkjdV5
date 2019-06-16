@@ -30,6 +30,8 @@ end
 
 -- no target handling
 -- destroy target
+function GoFight()
+end
 
 -- ========== Main program ============
 dialogInit()
@@ -75,9 +77,10 @@ for i = 1, count do
                     if lv ~= requiredLevel then
                         click(lCancelTarget)
                     else
+                        GoFight()
                     end
                 else
-                    if
+                    if 
                 end
 
             until true
