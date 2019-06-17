@@ -4,14 +4,23 @@ Settings:setCompareDimension(true, 640)
 Settings:setScriptDimension(true, 640)
 
 -- ========== Locations ===============
-lSetOut = Location(580, 64)
+lSailPlan = Location(580, 64)
 lBack = Location(520, 80)
 lConfirmTarget = Location(257, 310)
 lCancelTarget = Location(368, 312)
+lSetOut = Location(540, 320)
+lSetOutConfirm = Location(264, 206)
+lCheckResult = Location(312, 312)
+lCloseResult = Location(550, 340)
+lHarborArrived = Location(318, 208)
+lOpenChest = Location(528, 300)
+lFinishBattle = Location(542, 338)
 
 -- ========== Regions =================
 rSeaMap = Region(47, 12, 387, 271)
 rLevel = Region(305, 83, 110, 14)
+rFleet = Region(166, 57, 27, 21)
+
 -- ========== Constants ===============
 
 -- ========== Function ================
@@ -31,6 +40,34 @@ end
 -- no target handling
 -- destroy target
 function GoFight()
+    click(lConfirmTarget)
+    wait(1)
+    click(lSetOut)
+    click(lSetOutConfirm)
+    if rFleet:exists("pirateflag.png", 15) then
+        click(lCheckResult)
+        wait(1)
+        click(lCloseResult)
+        wait(1)
+        click(lCloseResult)
+        wait(1)
+        click(lHarborArrived)
+        wait(1)
+        click(lOpenChest)
+        wait(1)
+        click(lFinishBattle)
+    else
+        errExit()
+    end
+    wait(2)
+end
+
+-- exit with error
+function errExit()
+    vibrate(0.3)
+    wait(0.3)
+    vibrate(0.3)
+    scriptExit()
 end
 
 -- ========== Main program ============
@@ -58,8 +95,8 @@ dialogShow("Wanted Target")
 
 for i = 1, count do
     -- preparation
-    click(lSetOut)
-    wait(4)
+    click(lSailPlan)
+    wait(3)
 
     -- get target list
     list = GetTargetList()
@@ -78,11 +115,14 @@ for i = 1, count do
                         click(lCancelTarget)
                     else
                         GoFight()
+                        break
                     end
                 else
                     if lv >= requiredLevel then
                         GoFight()
+                        break
                     else
+                        click(lCancelTarget)
                     end
                 end
 
@@ -93,9 +133,6 @@ for i = 1, count do
 
     -- no target handling
     if n == 0 then
+        errExit()
     end
-
-    click(lBack)
-    wait(3)
-    -- destroy target
 end
