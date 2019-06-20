@@ -13,6 +13,7 @@ lSetOutConfirm = Location(264, 206)
 lCheckResult = Location(312, 312)
 lCloseResult = Location(550, 340)
 lHarborArrived = Location(318, 208)
+lFinishCheckPoint = Location(538, 334)
 lOpenChest = Location(528, 300)
 lFinishBattle = Location(542, 338)
 
@@ -20,11 +21,11 @@ lFinishBattle = Location(542, 338)
 rSeaMap = Region(47, 12, 387, 271)
 rLevel = Region(305, 83, 110, 14)
 rFleet = Region(166, 57, 27, 21)
+rPowerValue = Region(209, 81, 56, 18)
 
 -- ========== Constants ===============
 
 -- ========== Function ================
--- preparation
 -- get target list
 function GetTargetList()
     targets = regionFindAllNoFindException(rSeaMap, "pirateship.png")
@@ -37,37 +38,60 @@ function CheckLevel()
     return level
 end
 
--- no target handling
 -- destroy target
 function GoFight()
     click(lConfirmTarget)
     wait(1)
     click(lSetOut)
+    wait(1)
     click(lSetOutConfirm)
-    if rFleet:exists("pirateflag.png", 15) then
+    if rFleet:exists("pirateflag.png", 40) then
         click(lCheckResult)
-        wait(1)
+        for i = 1, 6 do
+            if CheckPointColor(lCloseResult, 68, 45, 29) then
+                break
+            else
+                wait(1)
+            end
+        end
         click(lCloseResult)
-        wait(1)
+        wait(2)
         click(lCloseResult)
-        wait(1)
+        wait(2)
         click(lHarborArrived)
-        wait(1)
-        click(lOpenChest)
-        wait(1)
+        for i = 1, 20 do
+            if CheckPointColor(lFinishCheckPoint, 247, 247, 247) then
+                break
+            else
+                click(lOpenChest)
+            end
+            wait(1)
+        end
         click(lFinishBattle)
     else
-        errExit()
+        errExit("No pirate flag in 40s.")
     end
-    wait(2)
+    wait(1)
 end
 
--- exit with error
-function errExit()
+-- no target handling
+
+-- tool functions
+function errExit(msg)
     vibrate(0.3)
     wait(0.3)
     vibrate(0.3)
+    print(msg)
     scriptExit()
+end
+
+function CheckPointColor(pt, r, g, b)
+    vR, vG, vB = getColor(pt)
+    if vR == r and vG == g and vB = b then
+        return true
+    else
+        return false
+    end
 end
 
 -- ========== Main program ============
@@ -85,18 +109,10 @@ addRadioButton("5 stars", 4)
 addRadioButton("6 stars", 5)
 dialogShow("Wanted Target")
 
--- if bfixed == true then
---     toast("fixed level.")
--- else
---     toast("non fixed level.")
--- end 
-
--- toast("level: " .. level)
-
 for i = 1, count do
     -- preparation
     click(lSailPlan)
-    wait(3)
+    wait(4)
 
     -- get target list
     list = GetTargetList()
@@ -119,8 +135,13 @@ for i = 1, count do
                     end
                 else
                     if lv >= requiredLevel then
-                        GoFight()
-                        break
+                        v, r = numberOCRNoFindException(rPowerValue, "num")
+                        if r == true and v < 4200 then
+                            GoFight()
+                            break
+                        else
+                            click(lCancelTarget)
+                        end
                     else
                         click(lCancelTarget)
                     end
@@ -133,6 +154,6 @@ for i = 1, count do
 
     -- no target handling
     if n == 0 then
-        errExit()
+        errExit("No pirate ship.")
     end
 end
