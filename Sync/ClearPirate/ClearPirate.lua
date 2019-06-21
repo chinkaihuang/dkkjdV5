@@ -10,6 +10,7 @@ lConfirmTarget = Location(257, 310)
 lCancelTarget = Location(368, 312)
 lSetOut = Location(540, 320)
 lSetOutConfirm = Location(264, 206)
+lPirateFlag = Location(179, 66)
 lCheckResult = Location(312, 312)
 lCloseResult = Location(550, 340)
 lHarborArrived = Location(318, 208)
@@ -45,32 +46,43 @@ function GoFight()
     click(lSetOut)
     wait(1)
     click(lSetOutConfirm)
-    if rFleet:exists("pirateflag.png", 40) then
-        click(lCheckResult)
-        for i = 1, 6 do
-            if CheckPointColor(lCloseResult, 68, 45, 29) then
-                break
-            else
-                wait(1)
-            end
-        end
-        click(lCloseResult)
-        wait(2)
-        click(lCloseResult)
-        wait(2)
-        click(lHarborArrived)
-        for i = 1, 20 do
-            if CheckPointColor(lFinishCheckPoint, 247, 247, 247) then
-                break
-            else
-                click(lOpenChest)
-            end
+    for i = 1, 60 do
+        if CheckPointColor(lPirateFlag, 86, 85, 93) then
+            break
+        else
             wait(1)
         end
-        click(lFinishBattle)
-    else
-        errExit("No pirate flag in 40s.")
     end
+
+    click(lCheckResult)
+
+    for i = 1, 6 do
+        if CheckPointColor(lCloseResult, 68, 45, 29) then
+            break
+        else
+            wait(1)
+        end
+    end
+
+    click(lCloseResult)
+    wait(2)
+    click(lCloseResult)
+    wait(2)
+    click(lHarborArrived)
+    for i = 1, 20 do
+        if CheckPointColor(lFinishCheckPoint, 247, 247, 247) then
+            break
+        else
+            click(lOpenChest)
+        end
+        wait(1)
+    end
+    click(lFinishBattle)
+
+    -- else
+    --     errExit("No pirate flag in 40s.")
+    -- end
+
     wait(1)
 end
 
