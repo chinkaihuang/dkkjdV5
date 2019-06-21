@@ -4,6 +4,7 @@ Settings:setCompareDimension(true, 640)
 Settings:setScriptDimension(true, 640)
 
 -- ========== Locations ===============
+lNinaHair = Location(208, 125)
 lSailPlan = Location(580, 64)
 lBack = Location(520, 80)
 lConfirmTarget = Location(257, 310)
@@ -123,6 +124,15 @@ dialogShow("Wanted Target")
 
 for i = 1, count do
     -- preparation
+    for i = 1, 3 do
+        if CheckPointColor(lNinaHair, 255, 199, 103) then
+            click(lNinaHair)
+            break
+        else
+            wait(0.3)
+        end
+    end
+
     click(lSailPlan)
     wait(4)
 
