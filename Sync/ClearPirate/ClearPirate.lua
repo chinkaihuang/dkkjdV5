@@ -87,7 +87,7 @@ end
 
 function CheckPointColor(pt, r, g, b)
     vR, vG, vB = getColor(pt)
-    if vR == r and vG == g and vB = b then
+    if vR == r and vG == g and vB == b then
         return true
     else
         return false
