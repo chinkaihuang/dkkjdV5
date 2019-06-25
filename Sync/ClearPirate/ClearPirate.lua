@@ -26,6 +26,7 @@ rFleet = Region(166, 57, 27, 21)
 rPowerValue = Region(209, 81, 56, 18)
 
 -- ========== Constants ===============
+colorShipCenter = Color(132, 161, 200)
 
 -- ========== Function ================
 -- get target list
