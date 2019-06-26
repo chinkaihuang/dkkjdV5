@@ -14,6 +14,8 @@ lSetOutConfirm = Location(264, 206)
 lPirateFlag = Location(179, 66)
 lCheckResult = Location(312, 312)
 lCloseResult = Location(550, 340)
+lCloseTreasureMap = Location(317, 199)
+lDropTreasureMap = Location(370, 234)
 lHarborArrived = Location(318, 208)
 lFinishCheckPoint = Location(538, 334)
 lOpenChest = Location(528, 300)
@@ -67,7 +69,10 @@ function GoFight()
     end
 
     click(lCloseResult)
-    wait(2)
+    wait(1)
+    click(lCloseTreasureMap)
+    click(lDropTreasureMap)
+    wait(1)
     click(lCloseResult)
     wait(2)
     click(lHarborArrived)
@@ -144,11 +149,14 @@ for i = 1, count do
     n = table.getn(list)
     if n > 0 then
         for j, p in ipairs(list) do
-            click(p)
-            wait(1)
-            -- toast("This is " .. CheckLevel() .. "stars")
-            lv = CheckLevel()
             repeat
+                click(p)
+                wait(1)
+                if CheckPointColor(lPirateFlag, 86, 85, 93) == false then
+                    click(lCancelTarget)
+                    break
+                end
+                lv = CheckLevel()
                 if bfixed == true then
                     if lv ~= requiredLevel then
                         click(lCancelTarget)
@@ -169,7 +177,6 @@ for i = 1, count do
                         click(lCancelTarget)
                     end
                 end
-
             until true
             wait(1)
         end
