@@ -26,143 +26,190 @@ Coordinates = {
     -- 歐洲
     {
         -- 伊比利半島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{200, 95}, {330, 150}, {385, 200}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(200, 95), Location(330, 150), Location(385, 200)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 地中海
-        {{{}, {}, {}}, {{333, 136}, {213, 182}, {222, 238}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(333, 136), Location(213, 182), Location(222, 238)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 亞得里亞海
-        {{{175, 122}, {250, 177}, {273, 200}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(175, 122), Location(250, 177), Location(273, 200)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 小亞細亞
-        {{{247, 126}, {310, 123}, {255, 190}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(247, 126), Location(310, 123), Location(255, 190)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 黑海
-        {{{}, {}, {}}, {{}, {}, {}}, {{226, 181}, {226, 215}, {362, 218}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(226, 181), Location(226, 215), Location(362, 218)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 法蘭西
-        {{{96, 108}, {86, 180}, {250, 214}}, {{96, 108}, {86, 180}, {250, 214}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(96, 108), Location(86, 180), Location(250, 214)},
+         {Location(96, 108), Location(86, 180), Location(250, 214)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 不列顛群島
-        {{{}, {}, {}}, {{}, {}, {}}, {{116, 89}, {375, 80}, {131, 247}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(116, 89), Location(375, 80), Location(131, 247)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 北海
-        {{{}, {}, {}}, {{88, 101}, {101, 155}, {406, 178}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(88, 101), Location(101, 155), Location(406, 178)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 波羅的海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 俄羅斯
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 挪威海
-        {{{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 北非
     {
         -- 馬格里布西部
-        {{{211, 114}, {121, 133}, {111, 199}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(211, 114), Location(121, 133), Location(111, 199)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 馬格里布東部
-        {{{139, 121}, {341, 126}, {352, 175}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(139, 121), Location(341, 126), Location(352, 175)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 埃及
-        {{{}, {}, {}}, {{260, 104}, {226, 125}, {181, 184}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(260, 104), Location(226, 125), Location(181, 184)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)},
+         {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 尼羅河北部
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 尼羅河南部
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 非洲西岸
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 撒哈拉沙漠
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 南非
     {
         -- 剛果河
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 非洲南端
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 非洲東岸
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 馬達加斯加
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 中東
     {
         -- 阿拉伯半島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 中亞
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 裏海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 印度
     {
         -- 阿拉伯海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 孟加拉灣
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 印度洋
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 大西洋
     {
         -- 北大西洋
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 南大西洋
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 亞速爾群島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 北美
     {
         -- 北美東海岸
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 加勒比海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 墨西哥灣
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 加州
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 南美
     {
         -- 巴拿馬地峽
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 蓋亞那
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 亞馬遜河
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 巴西
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 拉普拉塔河
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 智利
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 祕魯
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 東南亞
     {
         -- 大巽他群島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 東南亞島嶼
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 南海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 遠東
     {
         -- 華南
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 華北
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 東海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 日本近海
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 朝鮮半島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 太平洋
     {
         -- 北太平洋
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 馬紹爾群島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 南太平洋
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}},
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 皮特肯群島
-        {{{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}, {{}, {}, {}}}
+        {{Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}, {Location(0, 0), Location(0, 0), Location(0, 0)}}
     }
 }
 
