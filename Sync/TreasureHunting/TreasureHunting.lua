@@ -169,6 +169,23 @@ Coordinates = {
 colorNationalShip = {154, 25, 25}
 
 -- ========== Function ================
+-- tool functions
+function errExit(msg)
+    vibrate(0.3)
+    wait(0.3)
+    vibrate(0.3)
+    print(msg)
+    scriptExit()
+end
+
+function CheckPointColor(pt, r, g, b)
+    vR, vG, vB = getColor(pt)
+    if vR == r and vG == g and vB == b then
+        return true
+    else
+        return false
+    end
+end
 
 -- ========== Main program ============
 dialogInit()
