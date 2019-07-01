@@ -4,6 +4,8 @@ Settings:setCompareDimension(true, 640)
 Settings:setScriptDimension(true, 640)
 
 -- ========== Locations ===============
+lSailPlan = Location(580, 64)
+lSetOut = Location(540, 320)
 
 -- ========== Regions =================
 
@@ -334,6 +336,10 @@ end
 dialogShow("編號")
 
 -- go to map
+if CheckPointColor(lSailPlan, 239, 218, 179) ~= true then
+    click(lSailPlan)
+    wait(3)
+end
 
 -- check every point
 lTreasure = nil
@@ -342,14 +348,24 @@ while Coordinates[area][place][ver][i] ~= nil and lTreasure == nil do
     repeat
         if CheckPointColor(Coordinates[area][place][ver][i], 0, 0, 0) then
             break
-        else if CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3]) then
+        elseif CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3]) then
             break
         else
             lTreasure = Coordinates[area][place][ver][i]
+        end
     until true
 end
 
+if lTreasure == nil then
+    errExit("Cannot find missed point.")
+end
+
 -- set out
+click(lTreasure:offset(0, -14))
+wait(2)
+click(lSetOut)
+wait(1)
+click(lSetOutConfirm)
 
 -- Marine salvage
 
