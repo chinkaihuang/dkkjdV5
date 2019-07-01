@@ -6,6 +6,8 @@ Settings:setScriptDimension(true, 640)
 -- ========== Locations ===============
 lSailPlan = Location(580, 64)
 lSetOut = Location(540, 320)
+lSetOutConfirm = Location(264, 206)
+lParkingConfirm = Location(318, 200)
 
 -- ========== Regions =================
 
@@ -128,25 +130,17 @@ Coordinates = {
         -- 剛果河
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 非洲南端
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 非洲東岸
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 馬達加斯加
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
@@ -155,19 +149,13 @@ Coordinates = {
         -- 阿拉伯半島
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 中亞
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 裏海
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
@@ -176,19 +164,14 @@ Coordinates = {
         -- 阿拉伯海
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 孟加拉灣
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 印度洋
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
@@ -197,20 +180,12 @@ Coordinates = {
         -- 北大西洋
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 南大西洋
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 亞速爾群島
         {{Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
-         {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}}
     },
     -- 北美
@@ -347,8 +322,10 @@ i = 1
 while Coordinates[area][place][ver][i] ~= nil and lTreasure == nil do
     repeat
         if CheckPointColor(Coordinates[area][place][ver][i], 0, 0, 0) then
+            i = i + 1
             break
         elseif CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3]) then
+            i = i + 1
             break
         else
             lTreasure = Coordinates[area][place][ver][i]
@@ -366,6 +343,10 @@ wait(2)
 click(lSetOut)
 wait(1)
 click(lSetOutConfirm)
+repeat
+    wait(1)
+until CheckPointColor(lParkingConfirm, 117, 97, 87)
+click(lParkingConfirm)
 
 -- Marine salvage
 
