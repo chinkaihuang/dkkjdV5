@@ -8,6 +8,8 @@ lSailPlan = Location(580, 64)
 lSetOut = Location(540, 320)
 lSetOutConfirm = Location(264, 206)
 lParkingConfirm = Location(318, 200)
+lOpenChest = Location(528, 300)
+lFinishSailing = Location(542, 338)
 
 -- ========== Regions =================
 
@@ -265,7 +267,8 @@ Coordinates = {
     }
 }
 
-colorNationalShip = {154, 25, 25}
+colorNationalShip = {146, 3, 4}
+-- colorNationalShip = {154, 25, 25}
 
 -- ========== Function ================
 -- tool functions
@@ -277,13 +280,21 @@ function errExit(msg)
     scriptExit()
 end
 
-function CheckPointColor(pt, r, g, b)
+function CheckPointColor(pt, r, g, b, similar)
     vR, vG, vB = getColor(pt)
-    if vR == r and vG == g and vB == b then
-        return true
+    result = false
+
+    if similar then
+        if math.abs(vR - r) < 15 and math.abs(vG - g) < 15 and math.abs(vB - b) < 15 then
+            result = true
+        end
     else
-        return false
+        if vR == r and vG == g and vB == b then
+            result = true
+        end
     end
+
+    return result
 end
 
 -- ========== Main program ============
@@ -311,20 +322,23 @@ end
 dialogShow("編號")
 
 -- go to map
-if CheckPointColor(lSailPlan, 239, 218, 179) ~= true then
+if CheckPointColor(lSailPlan, 239, 218, 179, false) ~= true then
     click(lSailPlan)
-    wait(3)
 end
+
+repeat
+    wait(1)
+until CheckPointColor(lSailPlan, 239, 218, 179, false)
 
 -- check every point
 lTreasure = nil
 i = 1
 while Coordinates[area][place][ver][i] ~= nil and lTreasure == nil do
     repeat
-        if CheckPointColor(Coordinates[area][place][ver][i], 0, 0, 0) then
+        if CheckPointColor(Coordinates[area][place][ver][i], 0, 0, 0, true) then
             i = i + 1
             break
-        elseif CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3]) then
+        elseif CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3], true) then
             i = i + 1
             break
         else
@@ -345,8 +359,13 @@ wait(1)
 click(lSetOutConfirm)
 repeat
     wait(1)
-until CheckPointColor(lParkingConfirm, 117, 97, 87)
+until CheckPointColor(lParkingConfirm, 117, 97, 87, false)
 click(lParkingConfirm)
+repeat
+    click(lOpenChest)
+    wait(1)
+until CheckPointColor(lFinishCheckPoint, 247, 247, 247, false)
+click(lFinishSailing)
 
 -- Marine salvage
 
