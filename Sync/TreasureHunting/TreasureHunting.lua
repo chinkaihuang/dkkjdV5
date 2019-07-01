@@ -327,7 +327,7 @@ end
 dialogShow("選擇海圖")
 
 dialogInit()
-addRadioGroup("version", 1)
+addRadioGroup("ver", 1)
 for i = 1, Maps[area][place][2] do
     addRadioButton(tostring(i), i)
 end
@@ -336,6 +336,18 @@ dialogShow("編號")
 -- go to map
 
 -- check every point
+lTreasure = nil
+i = 1
+while Coordinates[area][place][ver][i] ~= nil and lTreasure == nil do
+    repeat
+        if CheckPointColor(Coordinates[area][place][ver][i], 0, 0, 0) then
+            break
+        else if CheckPointColor(Coordinates[area][place][ver][i], colorNationalShip[1], colorNationalShip[2], colorNationalShip[3]) then
+            break
+        else
+            lTreasure = Coordinates[area][place][ver][i]
+    until true
+end
 
 -- set out
 
