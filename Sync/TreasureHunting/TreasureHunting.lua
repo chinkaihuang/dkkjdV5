@@ -65,7 +65,7 @@ Coordinates = {
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
         -- 不列顛群島
-        {{Location(0, 0), Location(0, 0), Location(0, 0)},
+        {{Location(116, 89), Location(375, 80), Location(131, 247)},
          {Location(0, 0), Location(0, 0), Location(0, 0)},
          {Location(116, 89), Location(375, 80), Location(131, 247)},
          {Location(0, 0), Location(0, 0), Location(0, 0)}},
