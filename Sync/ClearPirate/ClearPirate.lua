@@ -211,6 +211,16 @@ function CheckPointColor(pt, r, g, b)
     end
 end
 
+function WaitForPixel(pt, r, g, b, interval, times)
+    for i = 1, times do
+        if CheckPointColor(pt, r, g, b) then
+            return
+        else
+            wait(interval)
+        end
+    end
+end
+
 -- ========== Main program ============
 dialogInit()
 addTextView("Reqired Times: ")
