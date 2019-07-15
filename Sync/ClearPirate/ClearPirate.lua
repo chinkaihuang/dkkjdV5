@@ -26,9 +26,10 @@ rSeaMap = Region(47, 12, 387, 271)
 rLevel = Region(305, 83, 110, 14)
 rFleet = Region(166, 57, 27, 21)
 rPowerValue = Region(209, 81, 56, 18)
+rNeedFood = Region(562, 156, 17, 12)
 
 -- ========== Constants ===============
-colorShipCenter = {132, 161, 200}
+--colorShipCenter = {132, 161, 200}
 
 -- ========== Function ================
 -- get target list
@@ -94,6 +95,103 @@ function GoFight()
 end
 
 -- no target handling
+function FindMyShip()
+    ships = regionFindAllNoFindException(rSeaMap, "myship.png")
+    for j, s in ipairs(ships) do
+        vR, vG, vB = getColor(s:getCenter())
+        if vB > vR then
+            return s:getCenter()
+        end
+    end
+end
+
+function CheckNeedFood()
+    v, r = numberOCRNoFindException(rNeedFood, "foo")
+    if r == true and v > 0 then
+        return true
+    else
+        return false
+    end
+end
+
+function RefreshOpponents()
+    lMyShip = FindMyShip()
+    repeat
+        click(lMyShip:offset(0, -30))
+        -- wait(1)
+        if CheckNeedFood() == true then
+            break
+        end
+        click(lMyShip:offset(0, 30))
+        -- wait(1)
+        if CheckNeedFood() == true then
+            break
+        end
+        click(lMyShip:offset(-30, 0))
+        -- wait(1)
+        if CheckNeedFood() == true then
+            break
+        end
+        click(lMyShip:offset(30, 0))
+        -- wait(1)
+        if CheckNeedFood() == true then
+            break
+        end
+    until true
+
+    click(lSetOut)
+    wait(1)
+    click(lSetOutConfirm)
+    for i = 1, 60 do
+        if CheckPointColor(lPirateFlag, 29, 19, 23) then
+            break
+        else
+            wait(1)
+        end
+    end
+
+    click(lHarborArrived)
+
+    for i = 1, 20 do
+        if CheckPointColor(lFinishCheckPoint, 247, 247, 247) then
+            break
+        else
+            click(lOpenChest)
+        end
+        wait(1)
+    end
+    click(lFinishBattle)
+
+    wait(3)
+
+    click(lSailPlan)
+    wait(4)
+
+    click(lMyShip)
+
+    click(lSetOut)
+    wait(1)
+    click(lSetOutConfirm)
+    for i = 1, 60 do
+        if CheckPointColor(lPirateFlag, 29, 19, 23) then
+            break
+        else
+            wait(1)
+        end
+    end
+
+    click(lHarborArrived)
+
+    for i = 1, 20 do
+        if CheckPointColor(lFinishCheckPoint, 247, 247, 247) then
+            break
+        else
+            click(lOpenChest)
+        end
+        wait(1)
+    end
+    click(lFinishBattle)
+end
 
 -- tool functions
 function errExit(msg)
@@ -130,7 +228,7 @@ dialogShow("Wanted Target")
 
 for i = 1, count do
     -- preparation
-    for i = 1, 3 do
+    for j = 1, 3 do
         if CheckPointColor(lNinaHair, 255, 199, 103) then
             click(lNinaHair)
             break
@@ -162,6 +260,7 @@ for i = 1, count do
                         click(lCancelTarget)
                     else
                         GoFight()
+                        n = 0
                         break
                     end
                 else
@@ -169,6 +268,7 @@ for i = 1, count do
                         v, r = numberOCRNoFindException(rPowerValue, "num")
                         if r == true and v < 4200 then
                             GoFight()
+                            n = 0
                             break
                         else
                             click(lCancelTarget)
@@ -180,10 +280,14 @@ for i = 1, count do
             until true
             wait(1)
         end
-    end
+
+        if n ~= 0 then
+            RefreshOpponents()
+        end
 
     -- no target handling
-    if n == 0 then
-        errExit("No pirate ship.")
+    elseif n == 0 then
+        RefreshOpponents()
+        -- errExit("No pirate ship.")
     end
 end
