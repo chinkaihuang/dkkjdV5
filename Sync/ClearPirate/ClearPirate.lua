@@ -241,6 +241,7 @@ for i = 1, count do
     for j = 1, 3 do
         if CheckPointColor(lNinaHair, 255, 199, 103) then
             click(lNinaHair)
+            wait(0.3)
             break
         else
             wait(0.3)
