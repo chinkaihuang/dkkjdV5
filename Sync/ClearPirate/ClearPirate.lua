@@ -288,6 +288,9 @@ for i = 1, count do
                     end
                 end
             until true
+            if n == 0 then
+                break
+            end
             wait(1)
         end
 
